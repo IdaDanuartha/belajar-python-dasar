@@ -12,7 +12,7 @@ print(f"Tanggal lahir anda adalah : {tanggal_lahir}")
 print(f"Harinya adalah : {tanggal_lahir:%A}")
 
 today = dt.date.today()
-print(f"Haari ini tanggal : {today}")
+print(f"Hari ini tanggal : {today}")
 
 umur_hari = today - tanggal_lahir
 umur_tahun = umur_hari.days // 365
