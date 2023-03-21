@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
         print("SELAMAT DATANG DI PROGRAM")
         print("DATABASE PERPUSTAKAAN")
-        print(50*"=")
+        # print(50*"=")
 
         print(f'''
 1. Tampilkan buku (read)
@@ -33,15 +33,15 @@ if __name__ == "__main__":
 
         user_option = input("Masukkan opsi: ")
 
-        print(50*"=")
+        # print(50*"=", "\n")
 
         match user_option:
-            case "1": print("Read Data")
+            case "1": CRUD.read_console()
             case "2": print("Create Data")
             case "3": print("Update Data")
             case "4": print("Delete Data")
 
-        print(50*"=")       
+        # print(50*"=")       
         is_done = input("Apakah selesai (y/n)? ")
         if is_done == 'y' or is_done == 'Y':
             break

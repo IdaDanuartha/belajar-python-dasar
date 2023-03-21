@@ -22,3 +22,12 @@ def create_first_data():
             file.write(data_str)
     except:
         print("Gagal menambahkan data")
+
+def read():
+    try:
+        with open(Database.DB_NAME, "r") as file:
+            content = file.readlines()
+            return content
+    except:
+        print("Database gagal ditampilkan")
+        return False
