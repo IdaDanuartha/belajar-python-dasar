@@ -25,3 +25,23 @@ def read_console():
 
     # Footer
     print(100*"=" + "\n")
+
+def create_console():
+    print("\n" + "="*30)
+    print("Silahkan tambah data buku\n")
+    judul = input("Judul\t: ")
+    penulis = input("Penulis\t: ")
+    
+    while True:
+        try:
+            tahun = int(input("Tahun\t: "))
+            if len(str(tahun)) == 4:
+                break
+            else:
+                print("Panjang tahun harus 4, silahkan masukkan tahun lagi (yyyy)")    
+        except:
+            print("Tahun harus angka, silahkan masukkan tahun lagi (yyyy)")
+
+    Operasi.create(judul,penulis,tahun)
+    print("\nBerikut adalah data baru anda")
+    read_console()
