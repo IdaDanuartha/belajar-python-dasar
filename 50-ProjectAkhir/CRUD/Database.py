@@ -2,17 +2,16 @@ from . import Operasi
 
 DB_NAME = "data.txt"
 TEMPLATE = {
-    "id":"XXXXXX",
-    "judul": 255*" ",
-    "penulis": 255*" ",
-    "tahun": "yyyy",
-    "created_at": "yyyy-mm-dd"
+    "pk":"XXXXXX",
+    "date_add":"yyyy-mm-dd",
+    "judul":255*" ",
+    "penulis":255*" ",
+    "tahun":"yyyy"
 }
 
-# init console
 def init_console():
     try:
-        with open(DB_NAME, "r") as file:
+        with open(DB_NAME,"r") as file:
             print("Database tersedia, init done!")
     except:
         print("Database tidak ditemukan, silahkan membuat database baru")
